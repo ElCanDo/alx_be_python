@@ -1,7 +1,7 @@
-number1 = 5
-number2 = 10
-sum = number2 + number1
-difference = number2 - number1
+number1 = 10
+number2 = 5
+sum = number1 + number2
+difference = number1 - number2
 product = number1 * number2
 print(f"Addition of {number2} and {number1} is {sum}")
 print(f"Subtraction of {number2} and {number1} is {difference}")
