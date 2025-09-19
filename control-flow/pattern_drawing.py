@@ -4,8 +4,11 @@ while True:
         break
     else:
         print("Please enter a positive integer")
-
-for i in range(pattern_size):
-    for j in range(pattern_size ):
-        print("*", end="")
+row = 0
+while row < pattern_size:
+    row += 1
+    for column in range(pattern_size):
+        
+            print("*", end="")
     print()
+    
