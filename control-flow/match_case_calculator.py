@@ -25,4 +25,4 @@ match operation:
         print("Invalid operation.")
         result = "Error."
 
-print(f"Result is: {result}")
+print(f"The result is {result}.")
