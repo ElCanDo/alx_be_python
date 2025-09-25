@@ -1,7 +1,7 @@
 def perform_operation(num1,num2,operation):
-	num1 : float()
-	num2 : float()
-	operations : str("add,subtract,multiply,divide")
+	num1 = float()
+	num2 = float()
+	operations = str("add,subtract,multiply,divide")
 	match operation:
 		case "add":
 			result = num1 + num2
