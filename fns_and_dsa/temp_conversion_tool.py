@@ -6,15 +6,20 @@ def convert_to_celsius(fahrenheit):
 
 def  convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+while True:   
+    try:
+        temp = float(input("Enter the temperature to convert: "))
 
-temp = float(input("Enter the temperature to convert: "))
-convert = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
-if convert == "F":
-    result = convert_to_celsius(temp)
-    print(f"{temp}°{convert} is {result:.2f}\u00B0C")
-elif convert == "C":
-    result = convert_to_fahrenheit(temp)
-    print(f"{temp}\u00B0{convert} is {result:.2f}\u00B0F")
-else:
-    print("Error")
-
+        convert = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
+        if convert == "F":
+            result = convert_to_celsius(temp)
+            print(f"{temp}°{convert} is {result:.2f}\u00B0C")
+        elif convert == "C":
+            result = convert_to_fahrenheit(temp)
+            print(f"{temp}\u00B0{convert} is {result:.2f}\u00B0F")
+        else:
+            print("Invalid. Enter C or F.")
+    except ValueError:
+        print("Invalid temperature. Please enter a numeric value.")
+        break
+        
