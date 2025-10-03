@@ -12,9 +12,13 @@ def main():
     amount = float(params[0]) if params else None
 
     if command == "deposit" and amount is not None:
-        account.deposit(amount)
-        print(f"Deposited: ${amount}")
+        if amount <= 0:
+            print("Invalid Deposite ampount.")
+        elif account.deposit(amount):
+            print(f"Deposited: ${amount}")
     elif command == "withdraw" and amount is not None:
+        if amount <= 0:
+            print("Invalid withdrawal amount.")
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
         else:
