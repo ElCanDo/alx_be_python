@@ -10,4 +10,4 @@ def safe_divide(numerator, denominator):
     except ValueError:
         return "Error: Please enter numeric values only."
 
-print(safe_divide(73, 5))
+# print(safe_divide(73, 5))
