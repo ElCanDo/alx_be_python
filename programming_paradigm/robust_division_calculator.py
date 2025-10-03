@@ -2,9 +2,12 @@ def safe_divide(numerator, denominator):
     try:
         num = float(numerator)
         den = float(denominator)
-        return num/den
+        result = float(num/den)
+        return f"The result of the division is {result}"
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
         
     except ValueError:
         return "Error: Please enter numeric values only."
+
+print(safe_divide(73, 5))
