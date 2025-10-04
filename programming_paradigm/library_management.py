@@ -10,9 +10,11 @@ class Book:
         self._is_checked_out = False
        
 class Library:
+    
     def __init__(self):
-        # if _books is None:
-        #     self._books = []
+        _books = None
+        if _books is None:
+            self._books = []
         else:
             self._books = _books
     def add_book(self, book):
