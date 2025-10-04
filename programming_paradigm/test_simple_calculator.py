@@ -34,9 +34,5 @@ class TestSimpleCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.calc.divide(5, 0)      # Check for division by zero. 
 
-
-
-
-
 if __name__ == "__main__":
     unittest.main()
