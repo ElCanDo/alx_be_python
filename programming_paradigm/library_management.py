@@ -9,10 +9,8 @@ class Book:
     def return_book(self):
         self._is_checked_out = False
        
-    
-
 class Library:
-    def __init__(self):
+    def __init__(self, _books=None):
         if _books is None:
             self._books = []
         else:
@@ -26,5 +24,15 @@ class Library:
                 book.check_out_book()
                 break
             else:
-                book._is_checked_out()     
+                book._is_checked_out_()
+
+    def return_book(self, title):
+        for book in self._books:
+            if book.title == title:
+                book.return_book()
+                break
     def list_available_books(self):
+        for book in self._books:
+            if book._is_checked_out == False:
+                print(f"{book.title} by {book.author}")
+
