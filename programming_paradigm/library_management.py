@@ -12,7 +12,7 @@ class Book:
     
 
 class Library:
-    def __init__(self, _books):
+    def __init__(self):
         if _books is None:
             self._books = []
         else:
