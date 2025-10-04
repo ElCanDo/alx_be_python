@@ -30,8 +30,8 @@ class TestSimpleCalculator(unittest.TestCase):
     
     def test_divide(self):
         """Test the division method."""
-        self.assertAlmostEqual(self.calc.divide(15, 3), 5.0) # check if -1 + 1 = 0
-        self.assertAlmostEqual(self.calc.divide(-9, 3), -3.0) # check if -1 + 1 = 0
+        self.assertEqual(self.calc.divide(15, 3), 5.0) # check if -1 + 1 = 0
+        self.assertEqual(self.calc.divide(-9, 3), -3.0) # check if -1 + 1 = 0
         self.assertAlmostEqual(self.calc.divide(20, 3), 6.66666667, places=5) # check for floating-point  division
         with self.assertRaises(ValueError):
             self.calc.divide(5, 0)      # Check for division by zero. 
