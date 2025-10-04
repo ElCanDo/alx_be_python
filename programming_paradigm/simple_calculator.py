@@ -21,3 +21,4 @@ class SimpleCalculator:
             raise ValueError("Cannot devide by zero.")
         return a / b
     
+    
